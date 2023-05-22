@@ -7,7 +7,6 @@ pipeline {
 		stage("verifying tooling") {
 			steps {
 				sh '''
-					service docker start
 					docker version
 					docker info
 					docker compose version
