@@ -23,5 +23,10 @@ pipeline {
 				sh 'docker compose ps'
 			}
 		}
+		stage("Check Response") {
+			steps {
+				sh 'curl http://localhost'
+			}
+		}
 	}
 }
